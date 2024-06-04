@@ -3,6 +3,15 @@ import requests
 from langchain.memory import ConversationBufferMemory
 from langchain.memory import StreamlitChatMessageHistory
 from langsmith import Client
+import os
+
+# Usually, these values will be the same for both projects
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+# Replace "YOUR API KEY" with the API key you created
+os.environ["LANGCHAIN_API_KEY"] = "YOUR API KEY"
+# Make sure to use the correct project name
+os.environ["LANGCHAIN_PROJECT"] = "Sequential-Chain"
 
 
 from langchain.document_loaders import TextLoader
