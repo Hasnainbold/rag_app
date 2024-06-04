@@ -212,7 +212,7 @@ chat_model = load_chat_model()
 
 #file_path = 'software_data.txt'
 file_path = "software_data.txt"
-# HUGGINGFACEHUB_API_TOKEN = "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"
+# HUGGINGFACEHUB_API_TOKEN = "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"
 url = st.secrets["WEAVIATE_URL"]
 v_key = st.secrets["WEAVIATE_V_KEY"]
 gpt_key = st.secrets["GPT_KEY"]
