@@ -281,6 +281,6 @@ if st.sidebar.button("Clear message history"):
     memory.clear()
     st.session_state.trace_link = None
     st.session_state.run_id = None
-client = Client(api_url=langchain_endpoint, api_key=langchain_api_key)
+#client = Client(api_url=langchain_endpoint, api_key=langchain_api_key)
 
 
