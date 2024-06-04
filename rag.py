@@ -252,3 +252,5 @@ def reset_conversation():
   # st.session_state.chat_history = None
 
 st.button('Reset Chat', on_click=reset_conversation)
+feedback_option = "faces" if st.toggle(label="`Thumbs` ⇄ `Faces`", value=False) else "thumbs"
+
