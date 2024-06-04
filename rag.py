@@ -259,4 +259,14 @@ if st.session_state.get("run_id"):
         optional_text_label="[Optional] Please provide an explanation",  # Allow for additional comments
         key=f"feedback_{st.session_state.run_id}",
     )
+memory = ConversationBufferMemory(
+    chat_memory=StreamlitChatMessageHistory(key="langchain_messages"),
+    return_messages=True,
+    memory_key="chat_history",
+)
+if st.sidebar.button("Clear message history"):
+    print("Clearing message history")
+    memory.clear()
+    st.session_state.trace_link = None
+    st.session_state.run_id = None
 
