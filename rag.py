@@ -257,6 +257,11 @@ def reset_conversation():
   # st.session_state.chat_history = None
 
 st.button('Reset Chat', on_click=reset_conversation)
+for msg in st.session_state.langchain_messages:
+    streamlit_type = _get_openai_type(msg)
+    avatar = "🦜" if streamlit_type == "assistant" else None
+    with st.chat_message(streamlit_type, avatar=avatar):
+        st.markdown(msg.content)
 feedback_option = "faces" if st.toggle(label="`Thumbs` ⇄ `Faces`", value=False) else "thumbs"
 if st.session_state.get("run_id"):
     feedback = streamlit_feedback(
