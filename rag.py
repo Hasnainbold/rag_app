@@ -2,6 +2,7 @@ from langchain_openai import ChatOpenAI
 import requests
 from langchain.memory import ConversationBufferMemory
 from langchain.memory import StreamlitChatMessageHistory
+from langsmith import Client
 
 
 from langchain.document_loaders import TextLoader
