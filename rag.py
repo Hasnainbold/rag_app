@@ -112,6 +112,8 @@ class RAGEval:
         WEAVIATE_CLUSTER=url
         WEAVIATE_API_KEY=api_key
         client=weaviate.Client(embedded_options=EmbeddedOptions())
+        os.environ["LANGCHAIN_TRACING_V2"] = "true"
+        os.environ["LANGCHAIN_ENDPOINT"] = "<https://api.smith.langchain.com>"
 
         # Initialize the custom embedding model
         embedding_model = embed_model
