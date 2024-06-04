@@ -1,5 +1,7 @@
 from langchain_openai import ChatOpenAI
 import requests
+from langchain.memory import ConversationBufferMemory
+
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.docstore.document import Document
