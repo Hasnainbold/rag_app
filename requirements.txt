@@ -7,3 +7,4 @@ datasets
 sentence_transformers
 ragas
 weaviate-client
+pip install langsmith
