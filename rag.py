@@ -1,6 +1,8 @@
 from langchain_openai import ChatOpenAI
 import requests
 from langchain.memory import ConversationBufferMemory
+from some_module import StreamlitChatMessageHistory
+
 
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
