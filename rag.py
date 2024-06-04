@@ -216,7 +216,7 @@ file_path = "software_data.txt"
 url = st.secrets["WEAVIATE_URL"]
 v_key = st.secrets["WEAVIATE_V_KEY"]
 gpt_key = st.secrets["GPT_KEY"]
-HUGGINGFACEHUB_API_TOKEN="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"
+HUGGINGFACEHUB_API_TOKEN="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"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 mistral_parser = MistralParser()
