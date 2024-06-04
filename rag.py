@@ -1,7 +1,7 @@
 from langchain_openai import ChatOpenAI
 import requests
 from langchain.memory import ConversationBufferMemory
-from some_module import StreamlitChatMessageHistory
+from langchain.memory import StreamlitChatMessageHistory
 
 
 from langchain.document_loaders import TextLoader
