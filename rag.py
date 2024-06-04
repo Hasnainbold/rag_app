@@ -253,4 +253,10 @@ def reset_conversation():
 
 st.button('Reset Chat', on_click=reset_conversation)
 feedback_option = "faces" if st.toggle(label="`Thumbs` ⇄ `Faces`", value=False) else "thumbs"
+if st.session_state.get("run_id"):
+    feedback = streamlit_feedback(
+        feedback_type=feedback_option,  # Apply the selected feedback style
+        optional_text_label="[Optional] Please provide an explanation",  # Allow for additional comments
+        key=f"feedback_{st.session_state.run_id}",
+    )
 
